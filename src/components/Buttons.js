@@ -14,3 +14,6 @@ export const PrimaryCTA = styled(BaseButton)`
 export const GhostCTA = styled(BaseButton)`
   ${tw`bg-transparent text-white`};
 `
+export const GhostBlueCTA = styled(BaseButton)`
+  ${tw`text-primary-blue border-primary-blue`};
+`

@@ -7,6 +7,7 @@ module.exports = {
     borderRadius: {
       large: "46px",
       circle: "50%",
+      small: "9px",
     },
     extend: {
       colors: {
@@ -16,6 +17,7 @@ module.exports = {
         "brown-accent": "#401F3E",
         "orange-accent": "#E88D17",
         "white-color": "#F4F7F9",
+        "bluish-white": "#E8EFF6",
         "gray-color": "#84898D",
       },
       spacing: {

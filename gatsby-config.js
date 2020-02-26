@@ -11,10 +11,10 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ["Lato:n4,n7", "Titillium+Web:n4,n6"],
+          families: ["Lato:n4,n7", "Titillium+Web:n4,n6,n7"],
           urls: [
             "https://fonts.googleapis.com/css?family=Lato:400,700&display=swap",
-            "https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap",
+            "https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap",
           ],
         },
       },
