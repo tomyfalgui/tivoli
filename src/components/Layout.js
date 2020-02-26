@@ -1,7 +1,7 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
-import NavBar from "./NavBar"
-import "../styles/minireset.css"
+import Navbar from "./Navbar"
+import "../utils/global.css"
 
 const GlobalStyles = createGlobalStyle`
   font-family: 'Lato', sans-serif;
@@ -9,8 +9,8 @@ const GlobalStyles = createGlobalStyle`
 
 export default ({ children }) => (
   <main>
-    <GlobalStyles></GlobalStyles>
-    <NavBar />
+    <GlobalStyles />
+    <Navbar />
     {children}
   </main>
 )

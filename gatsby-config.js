@@ -10,8 +10,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
-        google: {
-          families: ["Lato:400,700", "Titillium+Web:400,600"],
+        custom: {
+          families: ["Lato:n4,n7", "Titillium+Web:n4,n6"],
+          urls: [
+            "https://fonts.googleapis.com/css?family=Lato:400,700&display=swap",
+            "https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap",
+          ],
         },
       },
     },
@@ -21,6 +25,12 @@ module.exports = {
         rule: {
           include: /assets/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        // Accepts all options defined by `gatsby-plugin-postcss` plugin.
       },
     },
   ],
