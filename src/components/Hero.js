@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import tw from "tailwind.macro"
 
 import { PrimaryCTA, GhostCTA } from "./Buttons"
 import Curve from "../assets/curve.svg"
@@ -12,32 +11,49 @@ const HeroSection = styled.section`
     #2c639b 0.01%,
     #2f8bcb 100%
   );
-  ${tw`p-10 font-semibold text-lg flex flex-col relative pb-40`};
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 40px;
+  padding-bottom: 160px;
 
   > svg {
-    ${tw`absolute bottom-0 w-full left-0 right-0`};
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 `
 
 const Tagline = styled.h2`
-  ${tw`text-white font-display tracking-wide mb-3 text-xl`};
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
 
   > span {
-    ${tw`text-orange-accent`};
+    color: ${p => p.theme.orange};
   }
 `
 
 const LogoContainer = styled.div`
-  ${tw`flex flex-col relative mb-10`};
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
 
   > svg {
     width: 100%;
   }
-  > svg:nth-child(2) {
-    ${tw`absolute`};
+`
 
-    left: 90px;
-  }
+const Description = styled.p`
+  color: ${p => p.theme["light-blue"]};
+  font-size: 11.5px;
+  line-height: 1.64;
+  margin-bottom: 32px;
 `
 
 const Hero = () => {
@@ -52,98 +68,98 @@ const Hero = () => {
           <path
             d="M101.041 33.1442C111.265 33.1442 119.552 25.9611 119.552 17.1003C119.552 8.23951 111.265 1.05643 101.041 1.05643C90.8176 1.05643 82.5298 8.23951 82.5298 17.1003C82.5298 25.9611 90.8176 33.1442 101.041 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M97.0963 33.1442C107.32 33.1442 115.608 25.9611 115.608 17.1003C115.608 8.23951 107.32 1.05643 97.0963 1.05643C86.8728 1.05643 78.585 8.23951 78.585 17.1003C78.585 25.9611 86.8728 33.1442 97.0963 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M93.2271 33.1442C103.451 33.1442 111.738 25.9611 111.738 17.1003C111.738 8.23951 103.451 1.05643 93.2271 1.05643C83.0036 1.05643 74.7158 8.23951 74.7158 17.1003C74.7158 25.9611 83.0036 33.1442 93.2271 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M89.358 33.1442C99.5815 33.1442 107.869 25.9611 107.869 17.1003C107.869 8.23951 99.5815 1.05643 89.358 1.05643C79.1345 1.05643 70.8467 8.23951 70.8467 17.1003C70.8467 25.9611 79.1345 33.1442 89.358 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M85.4132 33.1442C95.6367 33.1442 103.924 25.9611 103.924 17.1003C103.924 8.23951 95.6367 1.05643 85.4132 1.05643C75.1896 1.05643 66.9019 8.23951 66.9019 17.1003C66.9019 25.9611 75.1896 33.1442 85.4132 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M81.5435 33.1442C91.7671 33.1442 100.055 25.9611 100.055 17.1003C100.055 8.23951 91.7671 1.05643 81.5435 1.05643C71.32 1.05643 63.0322 8.23951 63.0322 17.1003C63.0322 25.9611 71.32 33.1442 81.5435 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M77.6744 33.1442C87.8979 33.1442 96.1857 25.9611 96.1857 17.1003C96.1857 8.23951 87.8979 1.05643 77.6744 1.05643C67.4509 1.05643 59.1631 8.23951 59.1631 17.1003C59.1631 25.9611 67.4509 33.1442 77.6744 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M73.8053 33.1442C84.0288 33.1442 92.3166 25.9611 92.3166 17.1003C92.3166 8.23951 84.0288 1.05643 73.8053 1.05643C63.5817 1.05643 55.2939 8.23951 55.2939 17.1003C55.2939 25.9611 63.5817 33.1442 73.8053 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M69.8604 33.1442C80.0839 33.1442 88.3717 25.9611 88.3717 17.1003C88.3717 8.23951 80.0839 1.05643 69.8604 1.05643C59.6369 1.05643 51.3491 8.23951 51.3491 17.1003C51.3491 25.9611 59.6369 33.1442 69.8604 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M65.9913 33.1442C76.2148 33.1442 84.5026 25.9611 84.5026 17.1003C84.5026 8.23951 76.2148 1.05643 65.9913 1.05643C55.7678 1.05643 47.48 8.23951 47.48 17.1003C47.48 25.9611 55.7678 33.1442 65.9913 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M62.1221 33.1442C72.3457 33.1442 80.6335 25.9611 80.6335 17.1003C80.6335 8.23951 72.3457 1.05643 62.1221 1.05643C51.8986 1.05643 43.6108 8.23951 43.6108 17.1003C43.6108 25.9611 51.8986 33.1442 62.1221 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M58.253 33.1442C68.4765 33.1442 76.7643 25.9611 76.7643 17.1003C76.7643 8.23951 68.4765 1.05643 58.253 1.05643C48.0295 1.05643 39.7417 8.23951 39.7417 17.1003C39.7417 25.9611 48.0295 33.1442 58.253 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M54.3077 33.1442C64.5312 33.1442 72.819 25.9611 72.819 17.1003C72.819 8.23951 64.5312 1.05643 54.3077 1.05643C44.0842 1.05643 35.7964 8.23951 35.7964 17.1003C35.7964 25.9611 44.0842 33.1442 54.3077 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M50.4386 33.1442C60.6621 33.1442 68.9499 25.9611 68.9499 17.1003C68.9499 8.23951 60.6621 1.05643 50.4386 1.05643C40.215 1.05643 31.9272 8.23951 31.9272 17.1003C31.9272 25.9611 40.215 33.1442 50.4386 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M46.5694 33.1442C56.7929 33.1442 65.0807 25.9611 65.0807 17.1003C65.0807 8.23951 56.7929 1.05643 46.5694 1.05643C36.3459 1.05643 28.0581 8.23951 28.0581 17.1003C28.0581 25.9611 36.3459 33.1442 46.5694 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M42.6246 33.1442C52.8481 33.1442 61.1359 25.9611 61.1359 17.1003C61.1359 8.23952 52.8481 1.05643 42.6246 1.05643C32.4011 1.05643 24.1133 8.23952 24.1133 17.1003C24.1133 25.9611 32.4011 33.1442 42.6246 33.1442Z"
             stroke="#54AFEF"
-            stroke-width="0.5"
-            stroke-miterlimit="10"
+            strokeWidth="0.5"
+            strokeMiterlimit="10"
           />
           <path
             d="M34.224 60.9973C36.7001 62.573 32.2543 65.7807 29.7219 67.1876C27.2833 69.72 22.8563 72.9277 24.6571 65.4993C26.4579 58.0709 28.784 58.4649 29.7219 59.5904C33.6612 58.1835 32.5357 52.2746 34.224 52.8373C35.4515 53.2465 33.9829 57.5603 32.86 60.2444C33.1705 60.3707 33.6118 60.6077 34.224 60.9973Z"
@@ -249,11 +265,11 @@ const Hero = () => {
           AI-Infused <br /> Digital Transformation
         </span>
       </Tagline>
-      <p className="text-light-blue font-normal text-xs leading-relaxed mb-8">
+      <Description>
         We are a digital enabling solution provider that develops, integrates,
         implements and supports innovative ideas to allow companies achieve
         their own best digital transformation.
-      </p>
+      </Description>
       <PrimaryCTA to="/solutions">Our Solutions</PrimaryCTA>
       <GhostCTA to="/contact-us">Contact Us</GhostCTA>
       <Curve />

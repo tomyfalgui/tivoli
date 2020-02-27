@@ -5,10 +5,16 @@ import tw from "tailwind.macro"
 import NavLogo from "./NavLogo"
 
 const Container = styled.nav`
-  ${tw`bg-primary-blue flex justify-center items-center py-md`};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: ${p => p.theme.primary};
 `
 
 const Fab = styled.svg`
+  position: fixed;
   right: 15px;
   bottom: 15px;
   z-index: 50;
@@ -24,7 +30,6 @@ const Navbar = function() {
         viewBox="0 0 86 86"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="fixed"
       >
         <g filter="url(#filter0_d)">
           <circle cx="41" cy="41" r="27" fill="#2F8BCB" />
@@ -36,8 +41,8 @@ const Navbar = function() {
           x2="50.5"
           y2="36.5"
           stroke="#CAE7FB"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <line
           x1="31.5"
@@ -45,8 +50,8 @@ const Navbar = function() {
           x2="50.5"
           y2="48.5"
           stroke="#CAE7FB"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <line
           x1="31.5"
@@ -54,8 +59,8 @@ const Navbar = function() {
           x2="50.5"
           y2="42.5"
           stroke="#CAE7FB"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <defs>
           <filter
