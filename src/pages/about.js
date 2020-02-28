@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import HeroAbout from "../components/HeroAbout"
 import CapableAbout from "../components/CapableAbout"
 import MilestonesAbout from "../components/MilestonesAbout"
-import TeamAbout from "../components/TeamAbout"
+import PeopleAbout from "../components/PeopleAbout"
 
 export default () => {
   return (
@@ -11,7 +11,7 @@ export default () => {
       <HeroAbout />
       <CapableAbout />
       <MilestonesAbout />
-      <TeamAbout />
+      <PeopleAbout />
     </Layout>
   )
 }

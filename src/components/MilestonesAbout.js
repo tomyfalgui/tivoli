@@ -6,7 +6,6 @@ const MilestonesAboutSection = styled.section`
   padding-top: 80px;
   padding-bottom: 200px;
   position: relative;
-  /* overflow-x: hidden; */
   background-color: #ffffff;
 
   > h2 {
@@ -23,6 +22,7 @@ const MilestonesAboutSection = styled.section`
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
   }
 `
 
@@ -89,7 +89,7 @@ const TimelineContent = styled.div`
     border: 1px solid #d0d0d0;
     top: -36px;
     left: 40px;
-    z-index: 100;
+    z-index: 50;
   }
 `
 
