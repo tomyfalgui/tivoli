@@ -27,11 +27,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        // Accepts all options defined by `gatsby-plugin-postcss` plugin.
-      },
-    },
   ],
 }

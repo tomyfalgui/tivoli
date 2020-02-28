@@ -14,22 +14,19 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "body-scroll-lock": "^2.6.4",
+    "framer-motion": "^1.8.4",
     "gatsby": "^2.19.7",
-    "gatsby-plugin-postcss": "^2.1.20",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.1.19",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.7.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "styled-components": "^5.0.1",
-    "stylelint": "^13.2.0",
-    "tailwind.macro": "^1.0.0-alpha.10"
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
-    "tailwindcss": "^1.2.0"
+    "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",

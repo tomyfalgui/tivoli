@@ -28,15 +28,29 @@ const CraftIndex = styled.section`
   }
 `
 
+const Header = styled.h2`
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #2e79b5;
+  font-family: ${p => p.theme.font.display};
+`
+
+const HeaderDescription = styled.p`
+  font-size: 11px;
+  line-height: 1.6469;
+  color: #617a96;
+  margin-bottom: 48px;
+`
+
 export default () => (
   <CraftIndex>
-    <h2 className="font-display text-primary-blue font-semibold text-lg leading-relaxed tracking-wide mb-2">
-      We craft solutions based on your company’s needs
-    </h2>
-    <p className="text-sm leading-relaxed mb-12">
+    <Header>We craft solutions based on your company’s needs</Header>
+    <HeaderDescription>
       These are some of the case studies that we have worked on from our
       previous clients, guests and business partners.
-    </p>
+    </HeaderDescription>
     <Product />
     <Product />
     <Product />

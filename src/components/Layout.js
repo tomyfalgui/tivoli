@@ -4,6 +4,7 @@ import Navbar from "./Navbar"
 import ContactUs from "./ContactUs"
 import Footer from "./Footer"
 import SubFooter from "./SubFooter"
+import "normalize.css"
 import "../utils/global.css"
 
 const theme = {
@@ -11,10 +12,16 @@ const theme = {
   orange: "#e88d17",
   white: "#F4F7F9",
   "light-blue": "#95b8e1",
+  font: {
+    display: "Titillium Web, sans-serif",
+  },
 }
 
 const GlobalStyles = createGlobalStyle`
+html, body {
+  font-size: 100%;
   font-family: 'Lato', sans-serif;
+}
 `
 
 export default ({ children }) => (

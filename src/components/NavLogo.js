@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import Logo from "../assets/logo.svg"
 import WordMarkTiny from "../assets/wordmark.svg"
@@ -7,6 +7,7 @@ import WordMarkTiny from "../assets/wordmark.svg"
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+
   > svg {
     margin-right: 16px;
   }
@@ -24,9 +25,9 @@ const WordMark = styled.div`
   }
 `
 
-export default function NavLogo(props) {
+export default function NavLogo({ open }) {
   return (
-    <LogoContainer>
+    <LogoContainer open={open}>
       <Logo />
       <WordMark>
         <h1>TIVOLI</h1>
