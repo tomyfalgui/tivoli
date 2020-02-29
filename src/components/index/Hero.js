@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-import { PrimaryCTA, GhostCTA } from "./Buttons"
-import Curve from "../assets/curve.svg"
+import { PrimaryCTA, GhostCTA } from "../Buttons"
+import Curve from "../../assets/curve.svg"
 
-const HeroSection = styled.section`
+const HeroSection = styled(motion.section)`
   background-image: linear-gradient(
     270deg,
     #253670 0%,
@@ -24,6 +25,23 @@ const HeroSection = styled.section`
     right: 0;
     width: 100%;
   }
+
+  @media screen and (min-width: 500px) {
+    padding-bottom: 300px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 `
 
 const Tagline = styled.h2`
@@ -37,17 +55,38 @@ const Tagline = styled.h2`
   > span {
     color: ${p => p.theme.orange};
   }
+
+  @media screen and (min-width: 1000px) {
+    font-size: 32px;
+  }
 `
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   position: relative;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 50;
 
+  @media screen and (min-width: 520px) {
+    align-self: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    order: 1;
+    align-self: stretch;
+    flex: 1;
+    max-width: 600px;
+  }
   > svg {
     width: 100%;
   }
+`
+
+const Change = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
 `
 
 const Description = styled.p`
@@ -55,12 +94,59 @@ const Description = styled.p`
   font-size: 11.5px;
   line-height: 1.64;
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-right: 36px;
+    max-width: 300px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    max-width: 450px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 64px;
+  }
 `
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+}
+const item = {
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+  hidden: {
+    opacity: 0,
+    y: -30,
+  },
+}
 
 const Hero = () => {
   return (
-    <HeroSection>
-      <LogoContainer>
+    <HeroSection initial="hidden" variants={list} animate="visible">
+      <LogoContainer variants={item}>
         <svg
           viewBox="0 0 245 227"
           fill="none"
@@ -260,19 +346,25 @@ const Hero = () => {
           />
         </svg>
       </LogoContainer>
-      <Tagline>
-        Enabling your{" "}
-        <span>
-          AI-Infused <br /> Digital Transformation
-        </span>
-      </Tagline>
-      <Description>
-        We are a digital enabling solution provider that develops, integrates,
-        implements and supports innovative ideas to allow companies achieve
-        their own best digital transformation.
-      </Description>
-      <PrimaryCTA to="/solutions">Our Solutions</PrimaryCTA>
-      <GhostCTA to="/contact-us">Contact Us</GhostCTA>
+      <Change variants={item}>
+        <Tagline>
+          Enabling your{" "}
+          <span>
+            AI-Infused <br /> Digital Transformation
+          </span>
+        </Tagline>
+        <Description>
+          We are a digital enabling solution provider that develops, integrates,
+          implements and supports innovative ideas to allow companies achieve
+          their own best digital transformation.
+        </Description>
+
+        <ButtonContainer>
+          <PrimaryCTA to="/solutions">Our Solutions</PrimaryCTA>
+          <GhostCTA to="/contact-us">Contact Us</GhostCTA>
+        </ButtonContainer>
+      </Change>
+
       <Curve />
     </HeroSection>
   )

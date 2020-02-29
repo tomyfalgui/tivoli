@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import Carousel from "@brainhubeu/react-carousel"
+import "@brainhubeu/react-carousel/lib/style.css"
 
 const TestimonialSection = styled.section`
   padding: 32px;
@@ -15,12 +17,27 @@ const Header = styled.h2`
   font-weight: 600;
   color: #e8eff6;
   text-align: center;
-  margin-bottom: 128px;
+  margin-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 25px;
+  }
 `
 
 const Cards = styled.div`
   display: flex;
   overflow-x: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`
+
+const CarouselWrapper = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 `
 
 export default () => (
@@ -30,7 +47,58 @@ export default () => (
       <Cardd />
       <Cardd />
       <Cardd />
+      <Cardd />
     </Cards>
+
+    <CarouselWrapper>
+      <Carousel
+        slidesPerPage={2}
+        infinite
+        addArrowClickHandler
+        offset={4}
+        arrowRight={
+          <svg
+            width="37"
+            height="37"
+            viewBox="0 0 37 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18.5" cy="18.5" r="18" stroke="#479CD8" />
+            <path
+              d="M23.7071 19.7071C24.0976 19.3166 24.0976 18.6834 23.7071 18.2929L17.3431 11.9289C16.9526 11.5384 16.3195 11.5384 15.9289 11.9289C15.5384 12.3195 15.5384 12.9526 15.9289 13.3431L21.5858 19L15.9289 24.6569C15.5384 25.0474 15.5384 25.6805 15.9289 26.0711C16.3195 26.4616 16.9526 26.4616 17.3431 26.0711L23.7071 19.7071ZM22 20H23V18H22V20Z"
+              fill="#5DB1EB"
+            />
+          </svg>
+        }
+        arrowLeft={
+          <svg
+            width="37"
+            height="37"
+            viewBox="0 0 37 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="18.5"
+              cy="18.5"
+              r="18"
+              transform="rotate(180 18.5 18.5)"
+              stroke="#479CD8"
+            />
+            <path
+              d="M13.2929 17.2929C12.9024 17.6834 12.9024 18.3166 13.2929 18.7071L19.6569 25.0711C20.0474 25.4616 20.6805 25.4616 21.0711 25.0711C21.4616 24.6805 21.4616 24.0474 21.0711 23.6569L15.4142 18L21.0711 12.3431C21.4616 11.9526 21.4616 11.3195 21.0711 10.9289C20.6805 10.5384 20.0474 10.5384 19.6569 10.9289L13.2929 17.2929ZM15 17L14 17L14 19L15 19L15 17Z"
+              fill="#5DB1EB"
+            />
+          </svg>
+        }
+      >
+        <Cardd />
+        <Cardd />
+        <Cardd />
+        <Cardd />
+      </Carousel>
+    </CarouselWrapper>
   </TestimonialSection>
 )
 
@@ -64,12 +132,20 @@ const CardHeaderCompany = styled.p`
   font-size: 11px;
   letter-spacing: 0.03em;
   color: #e8f5ff;
+
+  @media screen and (min-width: 1000px) {
+    font-size: 12.8px;
+  }
 `
 
 const CardHeaderPosition = styled.p`
   font-size: 10px;
   letter-spacing: 0.03em;
   color: #aad9fa;
+
+  @media screen and (min-width: 1000px) {
+    font-size: 10.24px;
+  }
 `
 
 const CardBody = styled.div``
@@ -79,6 +155,10 @@ const CardBodyHeader = styled.p`
   letter-spacing: 0.03em;
   color: #e8eff6;
   margin-top: 16px;
+
+  @media screen and (min-width: 1000px) {
+    font-size: 20px;
+  }
 `
 const CardBodyDescription = styled.p`
   font-size: 10.24px;
@@ -87,6 +167,10 @@ const CardBodyDescription = styled.p`
   color: #e8eff6;
   max-width: 202px;
   margin-top: 8px;
+
+  @media screen and (min-width: 1000px) {
+    max-width: 350px;
+  }
 `
 
 const Rating = styled.div`

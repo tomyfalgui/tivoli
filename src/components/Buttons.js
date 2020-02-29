@@ -12,10 +12,20 @@ const BaseButton = styled(Link)`
   background-color: white;
   border: 1px solid white;
   border-radius: 46px;
+
+  @media screen and (min-width: 768px) {
+    padding: 8px 24px;
+    width: auto;
+  }
 `
 
 export const PrimaryCTA = styled(BaseButton)`
   margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
 `
 export const GhostCTA = styled(BaseButton)`
   background-color: transparent;
@@ -24,6 +34,11 @@ export const GhostCTA = styled(BaseButton)`
 export const GhostBlueCTA = styled(BaseButton)`
   color: ${p => p.theme.primary};
   border-color: ${p => p.theme.primary};
+
+  @media screen and (min-width: 768px) {
+    align-self: flex-start;
+    width: auto;
+  }
 `
 
 export const ContactUsBtn = styled.button`
@@ -35,4 +50,11 @@ export const ContactUsBtn = styled.button`
   border-radius: 46px;
   background-color: #3270a9;
   color: #f2f2f2;
+
+  @media screen and (min-width: 1024px) {
+    align-self: flex-start;
+    width: auto;
+    font-size: 12.8px;
+    padding: 8px 24px;
+  }
 `

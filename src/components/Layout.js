@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Navbar from "./Navbar"
 import ContactUs from "./ContactUs"
@@ -26,6 +27,9 @@ html, body {
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>
+    <Helmet>
+      <title>Tivoli Solutions</title>
+    </Helmet>
     <main>
       <GlobalStyles />
       <Navbar />

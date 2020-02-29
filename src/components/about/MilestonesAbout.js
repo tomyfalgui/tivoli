@@ -7,6 +7,7 @@ const MilestonesAboutSection = styled.section`
   padding-bottom: 200px;
   position: relative;
   background-color: #ffffff;
+  overflow: hidden;
 
   > h2 {
     font-family: ${p => p.theme.font.display};
@@ -15,6 +16,11 @@ const MilestonesAboutSection = styled.section`
     text-align: center;
     letter-spacing: 0.03em;
     color: #b6b6b6;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
   }
 
   > svg {
@@ -23,6 +29,13 @@ const MilestonesAboutSection = styled.section`
     left: 0;
     right: 0;
     width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -62,7 +75,7 @@ const TimelineContent = styled.div`
 
   p {
     font-size: 10.24px;
-    line-height: 1.17;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     color: #c2c2c2;
     max-width: 157px;
@@ -90,6 +103,19 @@ const TimelineContent = styled.div`
     top: -36px;
     left: 40px;
     z-index: 50;
+  }
+`
+
+const Curve = styled.svg`
+  @media screen and (min-width: 400px) {
+    display: none;
+  }
+`
+
+const BigCurve = styled.svg`
+  display: none;
+  @media screen and (min-width: 400px) {
+    display: block;
   }
 `
 
@@ -160,11 +186,21 @@ export default () => (
         </TimelineContent>
       </TimelineItem>
     </TimelineContainer>
-    <svg viewBox="0 0 320 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Curve viewBox="0 0 320 167" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M252.741 74.0464C450.309 -81.3492 616.575 47.0071 673 105.533V167H-28V103.934C-1.0072 116.042 79.9171 209.98 252.741 74.0464Z"
         fill="#EEEEEE"
       />
-    </svg>
+    </Curve>
+    <BigCurve
+      viewBox="0 0 1439 167"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M576.301 74.0464C981.865 -81.3492 1323.17 47.0071 1439 105.533V167H0V103.934C55.4104 116.042 221.53 209.98 576.301 74.0464Z"
+        fill="#EEEEEE"
+      />
+    </BigCurve>
   </MilestonesAboutSection>
 )

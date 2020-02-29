@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-import Solutions from "../components/SolutionsIndex"
-import Craft from "../components/CraftIndex"
-import Testimonials from "../components/TestimonialsIndex"
+import Hero from "../components/index/Hero"
+import Solutions from "../components/index/SolutionsIndex"
+import Craft from "../components/index/CraftIndex"
+import Testimonials from "../components/index/TestimonialsIndex"
 
 export default () => {
   return (

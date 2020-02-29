@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { GhostBlueCTA } from "./Buttons"
+import { GhostBlueCTA } from "../Buttons"
 
 const CraftIndex = styled.section`
+  display: flex;
+  flex-direction: column;
   background-image: linear-gradient(
     270deg,
     #d0dded 0%,
@@ -22,9 +24,35 @@ const CraftIndex = styled.section`
 
   > svg {
     position: absolute;
+    width: 100%;
     left: 0;
     right: 0;
     bottom: 0;
+  }
+
+  > svg.mobile {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  > svg.desktop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 300px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 200px;
+    padding-right: 200px;
   }
 `
 
@@ -35,6 +63,10 @@ const Header = styled.h2`
   letter-spacing: 0.03em;
   color: #2e79b5;
   font-family: ${p => p.theme.font.display};
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
 `
 
 const HeaderDescription = styled.p`
@@ -42,6 +74,23 @@ const HeaderDescription = styled.p`
   line-height: 1.6469;
   color: #617a96;
   margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+`
+
+const Products = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    > div:first-of-type {
+      margin-right: 16px;
+    }
+  }
 `
 
 export default () => (
@@ -51,14 +100,28 @@ export default () => (
       These are some of the case studies that we have worked on from our
       previous clients, guests and business partners.
     </HeaderDescription>
-    <Product />
-    <Product />
-    <Product />
 
-    <svg viewBox="0 0 320 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Products>
+      <Product />
+      <Product />
+    </Products>
+
+    <svg
+      viewBox="0 0 320 162"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="mobile"
+    >
       <path
         d="M143.681 73.603C-40.9224 -80.862 -196.278 46.7257 -249 104.901V166H406V104.901C380.779 116.937 305.164 208.723 143.681 73.603Z"
         fill="#2F8BCB"
+      />
+    </svg>
+    <svg viewBox="0 0 1437 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M861.5 73.3813C456.5 -80.6185 115.667 46.5849 0 104.585V165.5H1437V104.585C1381.67 116.585 1215.78 208.094 861.5 73.3813Z"
+        fill="#2F8BCB"
+        className="desktop"
       />
     </svg>
   </CraftIndex>
@@ -69,9 +132,16 @@ const ProductWrapper = styled.div`
   flex-direction: column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 333px;
+  }
 `
 
 const ProductDetailsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border-bottom-left-radius: 9px;
   border-bottom-right-radius: 9px;
   background-color: white;
@@ -84,6 +154,10 @@ const ProductDescription = styled.p`
   font-size: 11px;
   margin-bottom: 24px;
   color: #4f4f4f;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12.8px;
+  }
 `
 
 const ProductHeading = styled.h3`
@@ -91,6 +165,10 @@ const ProductHeading = styled.h3`
   font-weight: 700;
   color: ${p => p.theme.primary};
   margin-bottom: 8px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 function Product() {
@@ -157,7 +235,7 @@ function Product() {
           This solution is about this and this and that and it offers this and
           that. The pros and cons are stated as this and that.
         </ProductDescription>
-        <GhostBlueCTA>Learn More</GhostBlueCTA>
+        <GhostBlueCTA to="/solutions">Learn More</GhostBlueCTA>
       </ProductDetailsWrapper>
     </ProductWrapper>
   )
