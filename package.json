@@ -14,7 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@brainhubeu/react-carousel": "^1.12.14",
+    "@brainhubeu/react-carousel": "^1.12.9-alpha",
     "body-scroll-lock": "^2.6.4",
     "framer-motion": "^1.8.4",
     "gatsby": "^2.19.7",
