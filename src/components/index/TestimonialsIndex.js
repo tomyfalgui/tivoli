@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Carousel from "@brainhubeu/react-carousel"
+
+let Carousel
+if (typeof window !== "undefined") {
+  import("@brainhubeu/react-carousel").then(data => {
+    Carousel = data.default
+  })
+}
 import "@brainhubeu/react-carousel/lib/style.css"
 
 const TestimonialSection = styled.section`
