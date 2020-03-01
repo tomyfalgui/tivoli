@@ -18,7 +18,6 @@ const SolutionsHomeSection = styled.section`
     padding-right: 50px;
   }
   @media screen and (min-width: 1050px) {
-    flex-direction: row;
     align-items: stretch;
   }
 

@@ -27,7 +27,12 @@ const PeopleAboutSection = styled.section`
 
 const Founders = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 740px) {
+    flex-direction: row;
+  }
 `
 
 const Founder = styled.div`

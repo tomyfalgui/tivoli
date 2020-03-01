@@ -151,18 +151,21 @@ const Illustration = styled.div`
     transform: translateX(-50%);
     top: -40%;
     z-index: 20;
+    opacity: 0.8;
   }
   > svg:nth-of-type(3) {
     left: 50%;
     transform: translateX(-50%);
     top: -15%;
     z-index: 20;
+    opacity: 0.8;
   }
   > svg:nth-of-type(4) {
     left: 50%;
     transform: translateX(-50%);
     top: 5%;
     z-index: 20;
+    opacity: 0.8;
   }
 
   > svg:nth-of-type(5) {
@@ -365,8 +368,8 @@ export default () => (
             y2="84"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2D6EA8" stop-opacity="0" />
-            <stop offset="1" stop-color="#2678C0" />
+            <stop stopColor="#2D6EA8" stopOpacity="0" />
+            <stop offset="1" stopColor="#2678C0" />
           </linearGradient>
         </defs>
       </svg>
