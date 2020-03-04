@@ -530,7 +530,7 @@ const Navbar = function() {
                 <RequestFunding to="/solutions">
                   Request Quotation
                 </RequestFunding>
-                <TermsOfFunding to="/solutions">Visit Portfolio</TermsOfFunding>
+                <TermsOfFunding to="/portfolio">Visit Portfolio</TermsOfFunding>
               </Product>
               <Integrations>
                 <h2>Ready-to-Use Integrations</h2>
@@ -559,6 +559,7 @@ const Navbar = function() {
             </InnerExpandedContent>
           </InnerExpandedWrapper>
         </Expand>
+        <LinkItem to="/portfolio">Portfolio</LinkItem>
         <LinkItem to="/community">Community</LinkItem>
         <InternalLink to="/contact-us">Contact Us</InternalLink>
       </FabPopup>
@@ -614,7 +615,7 @@ const Navbar = function() {
                   <RequestFunding to="/solutions">
                     Request Quotation
                   </RequestFunding>
-                  <TermsOfFunding to="/solutions">
+                  <TermsOfFunding to="/portfolio">
                     Visit Portfolio
                   </TermsOfFunding>
                 </div>
@@ -672,6 +673,11 @@ const Navbar = function() {
             </MainIntegrations>
           </Expander>
         </ExpanderParent>
+        <li>
+          <NavItemLink activeClassName="active" to="/portfolio">
+            Portfolio
+          </NavItemLink>
+        </li>
         <li>
           <NavItemLink activeClassName="active" to="/community">
             Community
