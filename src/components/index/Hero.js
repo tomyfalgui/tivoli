@@ -24,6 +24,7 @@ const HeroSection = styled(motion.section)`
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 10;
   }
 
   @media screen and (min-width: 500px) {
@@ -112,6 +113,7 @@ const Description = styled.p`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 50;
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }

@@ -76,7 +76,7 @@ const LinkItem = styled(Link)`
   margin-bottom: 24px;
 `
 
-const InternalLink = styled.a`
+const InternalLink = styled(Link)`
   font-family: ${p => p.theme.font.display};
   font-weight: 600;
   font-size: 20px;
@@ -556,7 +556,7 @@ const Navbar = function() {
           </InnerExpandedWrapper>
         </Expand>
         <LinkItem to="/">Community</LinkItem>
-        <InternalLink href="#contact-us">Contact Us</InternalLink>
+        <InternalLink to="/contact-us">Contact Us</InternalLink>
       </FabPopup>
       <NavItems>
         <li>
