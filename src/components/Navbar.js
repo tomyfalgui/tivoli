@@ -191,7 +191,7 @@ const Product = styled.div`
   }
 `
 
-const RequestFunding = styled.a`
+const RequestFunding = styled(Link)`
   padding-top: 8px;
   padding-bottom: 8px;
   font-weight: bold;
@@ -212,7 +212,7 @@ const RequestFunding = styled.a`
   }
 `
 
-const TermsOfFunding = styled.a`
+const TermsOfFunding = styled(Link)`
   padding-top: 8px;
   padding-bottom: 8px;
   font-weight: bold;
@@ -516,8 +516,10 @@ const Navbar = function() {
                   This solution is about this and this and that and it offers
                   this and that. The pros and cons are stated as this and that.
                 </p>
-                <RequestFunding>Request Funding</RequestFunding>
-                <TermsOfFunding>See Terms of Funding</TermsOfFunding>
+                <RequestFunding to="/solutions">Request Funding</RequestFunding>
+                <TermsOfFunding to="/solutions">
+                  See Terms of Funding
+                </TermsOfFunding>
               </Product>
               <Product>
                 <h2>Customized Transformation</h2>
@@ -525,8 +527,10 @@ const Navbar = function() {
                   This solution is about this and this and that and it offers
                   this and that. The pros and cons are stated as this and that.
                 </p>
-                <RequestFunding>Request Quotation</RequestFunding>
-                <TermsOfFunding>Visit Portfolio</TermsOfFunding>
+                <RequestFunding to="/solutions">
+                  Request Quotation
+                </RequestFunding>
+                <TermsOfFunding to="/solutions">Visit Portfolio</TermsOfFunding>
               </Product>
               <Integrations>
                 <h2>Ready-to-Use Integrations</h2>
