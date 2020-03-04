@@ -54,7 +54,7 @@ export default () => (
       <Hide>, Powered by</Hide>{" "}
       <ExternalLink
         target="_blank"
-        href="https://www.linkedin.com/in/camille-puentespina-79866b179/"
+        href="https://www.linkedin.com/in/tomas-f-89339413a/"
       >
         Tomy Falgui
       </ExternalLink>
