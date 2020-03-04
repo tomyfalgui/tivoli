@@ -36,13 +36,28 @@ const Hide = styled.span`
   color: #41569c;
 `
 
+const ExternalLink = styled.a``
+
 export default () => (
   <SubFooter>
     <Description>
-      Tivoli Systems Solution, Inc. <Hide>2020 | All Rights Reserved.</Hide>
+      Tivoli Systems Solution, Corp. <Hide>2020 | All Rights Reserved.</Hide>
     </Description>
     <Description>
-      <Hide>Designed by</Hide> Camille<Hide>, Powered by</Hide> Tomy Falgui
+      <Hide>Designed by</Hide>{" "}
+      <ExternalLink
+        href="https://www.linkedin.com/in/camille-puentespina-79866b179/"
+        target="_blank"
+      >
+        Camille
+      </ExternalLink>{" "}
+      <Hide>, Powered by</Hide>{" "}
+      <ExternalLink
+        target="_blank"
+        href="https://www.linkedin.com/in/camille-puentespina-79866b179/"
+      >
+        Tomy Falgui
+      </ExternalLink>
     </Description>
   </SubFooter>
 )
