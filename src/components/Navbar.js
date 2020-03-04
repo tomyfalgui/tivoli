@@ -555,7 +555,7 @@ const Navbar = function() {
             </InnerExpandedContent>
           </InnerExpandedWrapper>
         </Expand>
-        <LinkItem to="/">Community</LinkItem>
+        <LinkItem to="/community">Community</LinkItem>
         <InternalLink to="/contact-us">Contact Us</InternalLink>
       </FabPopup>
       <NavItems>

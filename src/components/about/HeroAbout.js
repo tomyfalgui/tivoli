@@ -358,7 +358,6 @@ export default () => (
 
     <Illustration>
       <svg viewBox="0 0 300 84" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="84" fill="url(#paint0_linear)" />
         <defs>
           <linearGradient
             id="paint0_linear"

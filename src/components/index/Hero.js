@@ -68,7 +68,7 @@ const odd = keyframes`
   }
 
   to {
-      transform: translateY(15px);
+      transform: translateY(5px);
   }
 `
 
@@ -78,7 +78,7 @@ const even = keyframes`
   }
 
   to {
-      transform: translateY(-15px);
+      transform: translateY(5px);
   }
 `
 
@@ -105,35 +105,37 @@ const LogoContainer = styled(motion.div)`
   }
 
   .odd {
-    animation: ${odd} 1s ease infinite alternate;
+    transform: translateY(-10px);
+    animation: ${odd} 1s ease forwards;
   }
 
   .even {
-    transform: translateY(5px);
+    transform: translateY(10px);
+    animation: ${even} 1s ease forwards;
   }
 
   .one.one {
   }
   .two.two {
-    animation-delay: -1s;
+    animation-delay: 0.15s;
   }
   .three.three {
-    animation-delay: -2s;
+    animation-delay: 0.3s;
   }
   .four.four {
-    animation-delay: -3s;
+    animation-delay: 0.45s;
   }
   .five.five {
-    animation-delay: -4s;
+    animation-delay: 0.6s;
   }
   .six.six {
-    animation-delay: -5s;
+    animation-delay: 0.75s;
   }
   .seven.seven {
-    animation-delay: -6s;
+    animation-delay: 0.9s;
   }
   .eight.eight {
-    animation-delay: -7s;
+    animation-delay: 1.05s;
   }
 `
 
