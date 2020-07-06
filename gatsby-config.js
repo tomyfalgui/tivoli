@@ -27,6 +27,15 @@ module.exports = {
         },
       },
     },
+    // https://www.gatsbyjs.org/docs/deploying-to-s3-cloudfront/
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "tivoli-static",
+        protocol: "https",
+        hostname: "tivolisolutions.ph",
+      },
+    },
   ],
 }
